@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Whatsapp.SignUpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Whatsapp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Padding="20">
+        <StackPanel Spacing="20" HorizontalAlignment="Center">
+
+            <!-- Title -->
+            <TextBlock Text="Create an Account" FontSize="24" FontWeight="Bold" TextAlignment="Center" />
+
+            <!-- Name Field -->
+            <TextBox x:Name="NameTextBox" PlaceholderText="Full Name" 
+                     FontSize="16" Height="40" 
+                     HorizontalAlignment="Stretch" />
+
+            <!-- Phone Number Field -->
+            <TextBox x:Name="PhoneTextBox" PlaceholderText="Phone Number" 
+                     FontSize="16" Height="40" 
+                     InputScope="TelephoneNumber" 
+                     HorizontalAlignment="Stretch" />
+
+            <!-- Email Field -->
+            <TextBox x:Name="EmailTextBox" PlaceholderText="Email" 
+                     FontSize="16" Height="40" 
+                     InputScope="EmailSmtpAddress" 
+                     HorizontalAlignment="Stretch" />
+
+            <!-- Password Field -->
+            <PasswordBox x:Name="PasswordBox" PlaceholderText="Password" 
+                         FontSize="16" Height="40" 
+                         HorizontalAlignment="Stretch" />
+
+            <!-- Sign Up Button -->
+            <Button x:Name="SignUpButton" Content="Sign Up" 
+                    Height="40" FontSize="16" 
+                    Background="#FF25D366" Foreground="White"
+                    CornerRadius="5" HorizontalAlignment="Stretch" 
+                    Click="SignUpButton_Click"/>
+
+            <!-- Back to Login Link -->
+            <TextBlock Text="Already have an account? Log in" 
+                       FontSize="14" 
+                       Foreground="#FF128C7E"
+                       HorizontalAlignment="Center"
+                       TextDecorations="Underline"
+                       Tapped="BackToLogin_Tapped" />
+        </StackPanel>
+    </Grid>
+</Page>
